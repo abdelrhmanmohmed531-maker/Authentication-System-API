@@ -1,0 +1,40 @@
+INSTALLATION GUIDE
+
+1. Extract the project files.
+
+2. Open the solution file in Visual Studio.
+
+3. Configure the database connection in:
+
+appsettings.json
+
+Example:
+
+"ConnectionStrings": {
+"DefaultConnection": "Server=.;Database=AuthSystemDB;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+
+4. Create the database.
+
+Option 1:
+Run the SQL script:
+database_setup.sql
+
+Option 2:
+Use Entity Framework command:
+
+dotnet ef database update
+
+5. Run the project.
+
+dotnet run
+
+6. Open Swagger in your browser:
+
+http://localhost:5000/swagger
+
+You can now test the API including:
+
+* Register
+* Login
+* Protected endpoints
